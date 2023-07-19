@@ -25,8 +25,8 @@ function App() {
   };
 
   useEffect(function () {
-    setWeatherData(JSON.parse(localStorage.getItem('weather')));
-    setSearchTerm(localStorage.getItem('location'));
+    setWeatherData(JSON.parse(localStorage.getItem('weather')) || []);
+    setSearchTerm(localStorage.getItem('location') || '');
     setCity(localStorage.getItem('city') || 'Unknown Location');
   }, []);
 
